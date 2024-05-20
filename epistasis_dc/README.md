@@ -15,3 +15,11 @@ Joint work with:
 * [David R Penas](https://sites.google.com/view/davidrpenas), CSIC, Pontevedra, Spain.
 
 Repository maintained by [Fernando Castro-Prado](https://sites.google.com/view/fernando-castro-prado/home), USC & IDIS & CITMAga, Santiago de Compostela, Spain.
+
+# Structure of the repository
+
+For reproducing our simulation study, we refer the reader to [simulations].
+
+For the real data application to the genetics of schizophrenia, see the folders for each of the two analyses we run.
+* [experiment_i]
+* [experiment_ii]
