@@ -3,6 +3,12 @@ Resproducible research material for the numerical examples of the PhD dissertati
 
 _Nonparametric Independence Tests in High-Dimensional Settings, with Applications to the Genetics of Complex Disease_
 
+# System requirements
+
+Software in this folder mostly relies on [R](https://cran.r-project.org) and [R packages](https://cran.r-project.org/web/packages/available_packages_by_name.html) developed by various authors. We recommend R version 4.3.1+, in Windows 10+, for running our scripts. Details on the OS used, as well as the version of each package, are provided below.
+
+The applications to genetics depend on [PLINK v1.9](https://www.cog-genomics.org/plink/1.9/), by summoning `plink.exe` from the R scripts. The \*.exe file is expected to be in the current working directory. Users of OSs other than Windows should adapt the command line for calling PLINK to the requirements of their system.
+
 
 # General information on the R version used
 After running the `sessionInfo()` command, we get the information on our R session that we show below. We note that we do not expect any important deviation in the functioning of our scripts with incremental updates to R and its packages in the near future, but it is a good practice to document the session information regardless.
