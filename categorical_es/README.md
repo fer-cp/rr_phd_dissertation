@@ -1,8 +1,8 @@
-# RR material for: _Testing for genetic interaction with distance correlation_
+# RR material for: _Tests for categorical data beyond Pearson: A distance covariance and energy distance approach_
 
 Reproducible research material for Chapter 5 of my PhD dissetation, whose content is collected in preprint
 
->_Tests for categorical data beyond Pearson: A distance covariance and energy distance approach._
+>_Tests for categorical data beyond Pearson: A distance covariance and energy distance approach_
 >
 >https://arxiv.org/abs/2403.12711
 >
