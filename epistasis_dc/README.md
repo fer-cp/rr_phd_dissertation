@@ -23,3 +23,8 @@ For reproducing our simulation study (calibration of the type I error and power 
 For the real data application to the genetics of schizophrenia, see the folders for each of the two analyses we run.
 * [experiment_i] (functional enrichment);
 * [experiment_ii] (gene expression).
+
+
+# Genetic dataset
+
+Please refer to the aforementioned preprint (or to the PhD dissertation) for details on the origin and nature of our schizophrenia database, as well as for the funding institutions involved in its generation.
