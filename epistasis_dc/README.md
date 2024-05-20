@@ -1,6 +1,6 @@
 # RR material for: _Testing for genetic interaction with distance correlation_
 
-Reproducible research material for chapter 3 of my PhD dissetation, whose content is collected in preprint
+Reproducible research material for Chapter 3 of my PhD dissetation, whose content is collected in preprint
 
 >_Testing for genetic interaction with distance correlation_
 >
