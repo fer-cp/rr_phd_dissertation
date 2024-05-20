@@ -1,4 +1,4 @@
-# RR material for: _Testing for genetic interaction with distance correlation_
+# RR material for: _A generalized distance covariance framework for genome-wide association studies_
 
 Reproducible research material for Chapter 4 of my PhD dissetation, whose content is collected in preprint
 
