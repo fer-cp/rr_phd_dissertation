@@ -1,4 +1,4 @@
-# Reproducing our simulation study
+# Reproducing the simulation study
 
 By simply running the R script [masterscript_power.R],
 one generates the data tables (as _*.dat_ files) necessary to produce the plots
