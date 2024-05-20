@@ -18,8 +18,8 @@ Repository maintained by [Fernando Castro-Prado](https://sites.google.com/view/f
 
 # Structure of the repository
 
-For reproducing our simulation study, we refer the reader to [simulations].
+For reproducing our simulation study (calibration of the type I error and power comparison with pre-existing methodology), we refer the reader to [simulations].
 
 For the real data application to the genetics of schizophrenia, see the folders for each of the two analyses we run.
-* [experiment_i]
-* [experiment_ii]
+* [experiment_i] (functional enrichment);
+* [experiment_ii] (gene expression).
