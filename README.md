@@ -5,7 +5,7 @@ _Nonparametric Independence Tests in High-Dimensional Settings, with Application
 
 
 # General information on the R version used
-After running the `sessionInfo()` command, we get the following information on our R session:
+After running the `sessionInfo()` command, we get the information on our R session that we show below. We note that we do not expect any important deviation in the functioning of our scripts with incremental updates to R and its packages in the near future, but it is a good practice to document the session information regardless.
 ```
 R version 4.3.1 (2023-06-16 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
