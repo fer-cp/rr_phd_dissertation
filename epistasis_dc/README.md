@@ -14,4 +14,4 @@ Joint work with:
 * [Wenceslao González-Manteiga](http://eamo.usc.es/pub/wences/index.php/en/), USC & CITMAga, Santiago de Compostela, Spain;
 * [David R Penas](https://sites.google.com/view/davidrpenas), CSIC, Pontevedra, Spain.
 
-Repository maintained by [Fernando Castro-Prado](https://sites.google.com/view/fernando-castro-prado/home).
+Repository maintained by [Fernando Castro-Prado](https://sites.google.com/view/fernando-castro-prado/home), USC & IDIS & CITMAga, Santiago de Compostela, Spain.
