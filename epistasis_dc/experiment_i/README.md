@@ -12,3 +12,18 @@ supplement. One can do so, for example, with the `toy.ped` example supplied at t
 
 In our case, the filters yield L=8030 SNPs for Experiment I. We indicate as comments of the
 *.R file the results of each relevant step.
+
+One should run [masterscript_experiment_i.R] to reproduce Experiment I. It uses as input the data
+from the 8030 SNPs for cases and controls (Matrix_X.dat and Matrix_Y.dat), as well as the SNP IDs
+in the chromosome-position format (with some alterations for the sake of anonymity of sampled
+individuals, in order to make this data shareable; such modifications do not influence the results we
+present). The latter can be found in chr_pos.dat. Every relevant result has been written down as a
+comment in the *.R file. We recommend using the search function with the query “result present in
+the manuscript” to find the exact lines of code that replicate every numerical result for Experiment I
+that is cited in the main manuscript.
+
+At many points of the script, we generate intermediate result files, in order to ease running only parts
+of it. We do this in light of the moderately long running times of some segments, but it is also
+feasible to run the entire script within reasonable time in any modern desktop computer.
+Please note that it is necessary to set as the working directory the location of the masterscript R file
+before running it.
