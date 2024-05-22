@@ -1,15 +1,12 @@
 # Reproducing the simulation study
 
-By simply running the R script [masterscript_power.R],
-one generates the data tables (as _*.dat_ files) necessary to produce the plots
-that we display as a result of our simulation study (Section 4 of the preprint; Section 3.5 in the dissertation).
+The numerical results for simulations of type I error and power can be re-run by sourcing the R files with self-explanatory names in this folder (of the form _typeI*.R_ and _powersimu*.R_). The computation times are estimated in the script _comptime.R_.
 
-The power plots (which include the comparison with competing method BOOST, in a different colour)
-are directly generated when running the masterscript.
+All the graphics in the main body of the dissertation can be reproduced by first running the numerical results and then using the plotting configuration in _plots.R_ .
 
-The code for the calibration plots is a bit more cumbersome, due to the confidence band,
-so we split it to a separate script. Please run [plotting_calibration.R] to obtain the corresponding plots
-(Figures 2 of the paper; Figure 3.2 in the dissertation).
+There is a script with testing functions, which is used every time that a numerical result for our methodology is generated. It is called _sim_functions_snp_pheno.R_ and it calls a Python file named _pvalue_python.py_ for the evaluation of _p_-values with the library _mpmath_.
 
-In order to obtain plots or results for other models, one should either perform small manual edits
-in the scripts, or run the simulation functions with different values of the parameters.
+The following R packages are used:
+* AssocTests (for comparing with pre-existing competing tests);
+* parallel (allows for multi-thread or multi-core computations, whenever the hardware meets these needs);
+* microbenchmark (measuring times).
