@@ -15,13 +15,3 @@ _\*.signifpairs.txt_ files (the ones not beginning with _Brain\_\*_) in the anal
 
 To replicate Experiment II, the reader is kindly asked to run masterscript_experiment_ii.R. All the
 observations we made for the masterscript of Experiment I also apply to this one.
-Source of data.
-
-
-Due to confidentiality, we are not allowed to share the whole database, so we will directly start
-the reproducibility scripts with the two subsets that are used on Experiment I (8030 SNPs) and
-Experiment II (6456) SNPs. We do provide scripts with the necessary code for filtering GWAS
-datasets in the same way we did in each experiment (file names
-filtering_snps_experiment_i[i].R)
-Please note that some SNP IDs have been altered for the purpose of sharing our code for
-reproducibility, in a way
