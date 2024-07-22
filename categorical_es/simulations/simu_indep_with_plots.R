@@ -3,7 +3,6 @@ source("bs_test_functions.R")
 source("test_functions_ct_dcov.R")
 
 GenerateData <- function(n, p) {
-  # This generates data according to some model. Think which
   r <- dim(p)[1]
   c <- dim(p)[2]
   data <- rmultinom(n, 1, p)
@@ -24,9 +23,6 @@ GenerateData <- function(n, p) {
 
 
 #### Decaying marginals example ####
-# Here we have a sparse change in the large probabilities.
-# Chi^2 seems to fail to control
-# Type I error and also to have bad power.
 
 # M<-700
 M <- 10000
@@ -49,7 +45,6 @@ perturb[1, 1] <- 1
 perturb[1, 2] <- -1
 perturb[2, 1] <- -1
 perturb[2, 2] <- 1
-# a sparse change in the larger probabilities should be bad for Chi^2
 
 DCpower <- rep(NA, length(Eps))
 chisqpower <- rep(NA, length(Eps))
@@ -191,15 +186,6 @@ for (i in 1:length(USPpower)) {
   segments(Eps[i], Fisherpower[i] - 3 * SEf[i], Eps[i], Fisherpower[i] + 3 * SEf[i], col = 3)
 }
 # With n=100; M=10000; B=999; r=5; c=8; Eps=0.012*(0:10)
-
-# With n=100; M=10000; B=999; r=5; c=8; Eps=0.012*(0:10), Tom's first run gave:
-# USPpower=c(0.0501,0.0867,0.2320,0.4621,0.7152,0.8934,0.9743,0.9970,0.9997,1.0000,1.0000)
-# chisqpower=c(0.0581,0.0549,0.0689,0.0936,0.1474,0.2465,0.4053,0.6180,0.8281,0.9627,0.9984)
-# chisqpermpower=c(0.0522,0.0559,0.0735,0.1062,0.1720,0.2919,0.4473,0.6463,0.8192,0.9380,0.9904)
-# Gpower=c(0.0029,0.0029,0.0094,0.0258,0.0703,0.1813,0.3839,0.6444,0.8670,0.9785,0.9994)
-# Gpermpower=c(0.0521,0.0649,0.1088,0.2094,0.3688,0.5916,0.7996,0.9305,0.9859,0.9993,1.0000)
-# Fisherpower=c(0.0517,0.0655,0.1247,0.2354,0.4338,0.6592,0.8435,0.9546,0.9949,0.9996,1.0000)
-# DCpower=c(0.0476,0.0964,0.2354,0.4689,0.7221,0.8955,0.9756,0.9974,0.9998,1.0000,1.0000)
 
 write.table(DCpower, "pvals/DCpower_dec_marg_M1E4.txt", row.names = F, col.names = F)
 write.table(USPpower, "pvals/USPpower_dec_marg_M1E4.txt", row.names = F, col.names = F)
