@@ -1,6 +1,6 @@
 require(CompQuadForm)
 
-statis.dcov <- function(ct) { # Based on the chi-squared one
+statis.dcov <- function(ct) {
   n <- sum(ct)
   q <- rowSums(ct) / n
   r <- colSums(ct) / n
@@ -50,7 +50,7 @@ test.dcov.perm <- function(data, B = 1E4) {
   return(pval)
 }
 
-statis.chi <- function(ct) { # Tested that it works
+statis.chi <- function(ct) {
   n <- sum(ct)
   q <- rowSums(ct) / n
   r <- colSums(ct) / n
@@ -82,17 +82,6 @@ test.chisq <- function(ct) {
   J <- ncol(ct)
   pval <- 1 - pchisq(ts, (I - 1) * (J - 1))
   return(pval)
-}
-
-chiperm <- function(data, B = 999) {
-  # Totally deprecated. Delete in v4
-  rowTotals <- rowSums(data)
-  colTotals <- colSums(data)
-  obs.chi.value <- statis.chi(data)
-  chistat.perm <- vector(mode = "numeric", length = B)
-  chistat.perm <- sapply(r2dtable(B, rowTotals, colTotals), statis.chi)
-  p.uppertail <- (1 + sum(chistat.perm > obs.chi.value)) / (1 + B)
-  return(p.uppertail)
 }
 
 statis.g <- function(ct) {
@@ -134,7 +123,7 @@ test.g.perm <- function(data, B = 1E4) {
   return(pval)
 }
 
-statis.e <- function(obs, p0) { # Based on the chi-squared one
+statis.e <- function(obs, p0) {
   n <- sum(obs)
   e <- n * p0
   ts <- sum((obs - e)^2) / n # Important to divide by "n"
@@ -167,7 +156,7 @@ test.e <- function(obs, p0) {
   return(pval)
 }
 
-statis.chi.gof <- function(obs, p0) { # Tested that it works
+statis.chi.gof <- function(obs, p0) {
   n <- sum(obs)
   e <- n * p0
   if (any(e == 0)) {
@@ -199,7 +188,7 @@ test.chisq.gof <- function(obs, p0, df = NA) {
   return(pval)
 }
 
-statis.usp <- function(ct) { # Same results as the BS function
+statis.usp <- function(ct) {
   n <- sum(ct)
   q <- rowSums(ct) / n
   r <- colSums(ct) / n
@@ -210,9 +199,11 @@ statis.usp <- function(ct) { # Same results as the BS function
 
 test.uspa <- function(ct) {
   ts <- statis.usp(ct)
-  if (ts < 1E-7) ts <- 1E-7 # Avoids farebrothers > 1
   coef <- coef.dcov(ct)
-  pval <- farebrother(ts + sum(coef), coef)$Qq # Doesn't work at all
+  n <- sum(ct)
+  kk <- n * ts + sum(coef) # Important to multiply by "n"
+  if (kk < 1E-7) kk <- 1E-7 # Avoids farebrothers > 1
+  pval <- farebrother(kk, coef)$Qq
   if (pval < 0 | pval > 1) cat("Check Farebrother's behaviour.\n")
   return(pval)
 }
